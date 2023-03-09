@@ -86,7 +86,7 @@
 		class="flex w-full rounded-md gap-4 bg-gray-900 p-4"
 		on:submit|preventDefault={() => handleSubmit()}
 	>
-		<input type="text" class="input input-bordered w-full" bind:value={query} />
+		<input type="text" class="input bg-gray-800 input-bordered w-full" bind:value={query} />
 		<button type="submit" class="btn btn-accent"> Send </button>
 	</form>
 </div>
