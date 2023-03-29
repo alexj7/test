@@ -131,6 +131,6 @@
 <style>
 	.h-full {
 		flex-grow: 1;
-		height: calc(100vh - env(safe-area-inset-top));
+		height: 100svh;
 	}
 </style>
