@@ -4,19 +4,33 @@
 	export let message: string
 </script>
 
-<div class="chat {type === 'user' ? 'chat-end' : 'chat-start'} justify-end">
+<div class="chat mb-4 {type === 'user' ? 'chat-start' : 'chat-end '} justify-end">
 	<div class="chat-image avatar">
-		<div class="w-10 rounded-full">
+		<div class="w-6 rounded-full">
 			<img
-				src="https://ui-avatars.com/api/?name={type === 'user' ? 'Me' : 'D'}"
+				src="{type === 'user'? 'user.svg': '/dary-chat.svg' }"
 				alt="{type} avatar"
 			/>
 		</div>
 	</div>
-	<div class="chat-header">
-		{type === 'user' ? 'Me' : 'Bot'}
-	</div>
-	<div class="chat-bubble {type === 'user' ? 'chat-bubble-primary' : 'chat-bubble-secondary'}">
+	<div
+		class="chat-bubble {type === 'user'
+			? 'chat-bubble-user bg-gray-50 text-gray-600'
+			: 'chat-bubble-system bg-gradient-to-r  from-pink-600 to-purple-700'}"
+	>
 		{message}
 	</div>
 </div>
+
+<style>
+	.chat-bubble-user {
+		color: #63697b;
+		background-color: #eaecf2;
+	}
+	.chat-bubble-system {
+		color: #ffffff !important;
+	}
+	.chat-bubble-system:before {
+		background-color: #8422c8;
+	}
+</style>
