@@ -1,4 +1,4 @@
-import { OPENAI_KEY } from '$env/static/private'
+import { OPENAI_KEY, OPENAI_CHARACTERS } from '$env/static/private'
 import type { CreateChatCompletionRequest, ChatCompletionRequestMessage } from 'openai'
 import type { RequestHandler } from './$types'
 import { getTokens } from '$lib/tokenizer'
@@ -71,6 +71,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			model: 'gpt-3.5-turbo',
 			messages,
 			temperature: 0.9,
+			max_tokens: Number(OPENAI_CHARACTERS) || 100,
 			stream: true
 		}
 
