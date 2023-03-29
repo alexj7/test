@@ -62,10 +62,10 @@
 	}
 </script>
 
-<div class="h-screen flex flex-col w-full items-center text-xs">
+<div class="h-full flex flex-col w-full items-center text-xs">
 	<div class="h-14 w-full px-4 bg-white max-w-2xl flex items-center">
-		<img src="/dary.svg" alt="Icono">
-		<img class="h-4/6 ml-3" src="/dary_logo_1.svg" alt="Icono">
+		<img src="/dary.svg" alt="Icono" />
+		<img class="h-4/6 ml-3" src="/dary_logo_1.svg" alt="Icono" />
 	</div>
 	<div
 		class="bg-gray-100 h-full w-full bg-bacground-chat border-none p-4 overflow-y-auto flex flex-col max-w-2xl"
@@ -127,3 +127,10 @@
 		</button>
 	</form>
 </div>
+
+<style>
+	.h-full {
+		flex-grow: 1;
+		height: calc(100vh - env(safe-area-inset-top));
+	}
+</style>
