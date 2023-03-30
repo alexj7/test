@@ -62,11 +62,11 @@
 	}
 </script>
 
-<div class="h-screen max-w-2xl bg-gray-100">
-	<div class="h-full flex flex-col w-full items-center text-xs">
+<div class="h-screen  max-w-2xl bg-gray-100">
+	<div class="h-size flex flex-col w-full items-center text-xs">
 		<div class="h-14 w-full px-4 bg-white flex items-center">
 			<img src="/dary.svg" alt="Icono" />
-			<img class="h-4/6 ml-3" src="/dary_logo_1.svg" alt="Icono" />
+			<img class="h-4/6 ml-3" src="/dary_logo_1.png" alt="Icono" />
 		</div>
 		<div
 			class="bg-gray-100 h-full w-full bg-bacground-chat border-none p-4 overflow-y-auto flex flex-col"
@@ -131,8 +131,10 @@
 </div>
 
 <style>
-	.h-full {
+	.h-size {
 		flex-grow: 1;
+		width: 100%;
+		max-width: 100vw;
 		height: 100dvh;
 	}
 </style>
